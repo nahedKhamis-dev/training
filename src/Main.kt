@@ -1,41 +1,38 @@
 fun main(){
-    val isBlank = true
-    println(isBlank.not())
-    println(isBlank)
-    println("".isBlank())
-
-    // arithmetic operators: + - * / %
-    // assignment operators: += -= *= /= %=
+    // Boolean operators  || ==> OR  && ==> AND  ! ==> NOT operator
     /*
-    unary plus +
-    unary minus -
-    not !
-    increment ++
-    decrement --
-    prefix ++a
-    postfix a++
+    Structural equality
+    equality ==> == or .equals()
+    inequality ==> !=
      */
-    var a = 3
-    var b = 2
+    /*
+    Referential equality: Two references point to the same object
+    === and !==
+     */
 
-    b = a++
-    println(a)
-    println(b)
-    println(a)
-    println(b)
-    // prefix make add to a and b variable but postfix make add to a variable only.
-    val num = b
-    println(num)
+    class Persons(var name:String)
 
-    // comparison operators > < >= <= == !=
-    // if and if else and else if expressions
-    val test = 6
-    if(test > 7){
-        println("true")}
-    else {
-        println("false")
+    val obj1 = Persons("Ahmed")
+    val obj2 = Persons("Mahmoud")
+
+    if(obj1 !== obj2){
+        println("True")
+    }else{
+        println("False")
     }
-    // if else in one line
-    val integer = 53
-    if(integer > 35) println("your number is greater than 35") else println("your number is less than 35")
+
+    println("========================")
+
+    //When expression
+    val x = 44
+
+    when(x){
+        40 -> println("X == 40")
+        else -> println("X != 40")
+    }
+
+    when{
+        (x == 44) -> println("X == 44")
+        else -> println("X != 44")
+    }
 }
